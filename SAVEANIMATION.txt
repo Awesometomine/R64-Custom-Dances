@@ -18,14 +18,14 @@
 	rs.RenderStepped:Connect(function()
 		if status == "RECORD" then
 		    framecount = framecount + 1
-			armA = armA.. "\n armA[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.RightUpperArm.CFrame).. ") + game.Workspace.vis.armA.Position"
-			armB = armB.. "\n armB[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.LeftUpperArm.CFrame).. ") + game.Workspace.vis.armB.Position"
-			armC = armC.. "\n armC[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.RightLowerArm.CFrame).. ") + game.Workspace.vis.armC.Position"
-			armD = armD.. "\n armD[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.LeftLowerArm.CFrame).. ") + game.Workspace.vis.armD.Position"
-			head = head.. "\n head[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.Head.CFrame).. ") + game.Workspace.vis.head.Position"
-			legA = legA.. "\n legA[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.RightLowerLeg.CFrame).. ") + game.Workspace.vis.legA.Position"
-			legB = legB.. "\n legB[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.LeftLowerLeg.CFrame).. ") + game.Workspace.vis.legB.Position"
-			torso = torso.. "\n torso[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.UpperTorso.CFrame).. ") + game.Workspace.vis.torso.Position"
+			armA = armA.. "\n armA[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.RightUpperArm.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.armA.Position"
+			armB = armB.. "\n armB[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.LeftUpperArm.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.armB.Position"
+			armC = armC.. "\n armC[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.RightLowerArm.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.armC.Position"
+			armD = armD.. "\n armD[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.LeftLowerArm.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.armD.Position"
+			head = head.. "\n head[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.Head.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.head.Position"
+			legA = legA.. "\n legA[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.RightLowerLeg.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.legA.Position"
+			legB = legB.. "\n legB[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.LeftLowerLeg.CFrame- dummy.UpperTorso.Position).. ") + game.Workspace.vis.legB.Position"
+			torso = torso.. "\n torso[".. tostring(framecount).. "] = (CFrame.new(" ..tostring(dummy.UpperTorso.CFrame - dummy.UpperTorso.Position).. ") + game.Workspace.vis.torso.Position"
 		end
 	end)
 
