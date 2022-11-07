@@ -1,0 +1,58 @@
+
+
+	dummy = game:GetService("Workspace"):WaitForChild("Dummy")
+	armA = ""
+	armB = ""
+	armC = ""
+	armD = ""
+	head = ""
+	legA = ""
+	legB = ""
+	torso = ""
+	master = ""
+	framecount = 0
+	
+	status = "RECORD"
+
+	rs = game:GetService("RunService")
+	rs.RenderStepped:Connect(function()
+		if status == "RECORD" then
+		    framecount = framecount + 1
+			armA = armA.. "\n armA[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.RightUpperArm.CFrame).. ") + game.Workspace.vis.armA.Position"
+			armB = armB.. "\n armB[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.LeftUpperArm.CFrame).. ") + game.Workspace.vis.armB.Position"
+			armC = armC.. "\n armC[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.RightLowerArm.CFrame).. ") + game.Workspace.vis.armC.Position"
+			armD = armD.. "\n armD[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.LeftLowerArm.CFrame).. ") + game.Workspace.vis.armD.Position"
+			head = head.. "\n head[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.Head.CFrame).. ") + game.Workspace.vis.head.Position"
+			legA = legA.. "\n legA[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.RightLowerLeg.CFrame).. ") + game.Workspace.vis.legA.Position"
+			legB = legB.. "\n legB[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.LeftLowerLeg.CFrame).. ") + game.Workspace.vis.legB.Position"
+			torso = torso.. "\n torso[".. tostring(framecount).. "] = CFrame.new(" ..tostring(dummy.UpperTorso.CFrame).. ") + game.Workspace.vis.torso.Position"
+		end
+	end)
+
+    
+	wait(7.26) -- the time of the animation
+	status = "NEUTRAL"
+	print("DONE")
+				writefile("Beeboanims/armA.txt",armA)
+				writefile("Beeboanims/armB.txt",armB)
+				writefile("Beeboanims/armC.txt",armC)
+				writefile("Beeboanims/armD.txt",armD)
+				writefile("Beeboanims/head.txt",head)
+				writefile("Beeboanims/legA.txt",legA)
+				writefile("Beeboanims/legB.txt",legB)
+				writefile("Beeboanims/torso.txt",torso)
+				
+				
+	
+				armA = readfile("Beeboanims/armA.txt")
+				armB = readfile("Beeboanims/armB.txt")
+				armC = readfile("Beeboanims/armC.txt")
+				armD = readfile("Beeboanims/armD.txt")
+				head = readfile("Beeboanims/head.txt")
+				legA = readfile("Beeboanims/legA.txt")
+				legB = readfile("Beeboanims/legB.txt")
+				torso = readfile("Beeboanims/torso.txt")
+	
+	
+master = armA.. "\n"..armB.. "\n"..armC.. "\n"..armD.. "\n"..head.. "\n"..legA.. "\n"..legB.. "\n"..torso.. "\n"
+writefile("Beeboanims/master.txt",master)
