@@ -1,4 +1,5 @@
 if game.GameId == 2653561448 then 
+    local rs = game:GetService("RunService")
     local currentdance3 = "https://github.com/Awesometomine/R64-Custom-Dances/blame/main/Default-Dance.txt"
     longtext = game:HttpGet(currentdance, true)
     counter = 0
@@ -8,14 +9,12 @@ if game.GameId == 2653561448 then
         writefile(counter.. '.txt', longtext)
     end
 
-    spawn(function()
-    while wait() do
+    rs.Stepped:Connect(function()
         ghwuhuheg()
         ghwuhuheg()
         ghwuhuheg()
         ghwuhuheg()
         ghwuhuheg()
-    end
     end)
 end
 
