@@ -1,5 +1,4 @@
-if game.GameId == 6935553532 then 
-while wait() do
+if game.GameId == 2653561448 then 
 local rs = game:GetService("RunService")
 local currentdance3 = "https://github.com/Awesometomine/R64-Custom-Dances/blame/main/Default-Dance.txt"
 longtext = game:HttpGet(currentdance, true)
@@ -17,5 +16,4 @@ rs.Stepped:Connect(function()
     ghwuhuheg()
     ghwuhuheg()
 end)
-end
 end
