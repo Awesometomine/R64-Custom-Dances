@@ -597,7 +597,7 @@
  armC[197] = CFrame.new(0.507542729, -0.36307925, -0.227444872, -0.0241736043, 0.39115122, 0.920008898, 0.0211116374, 0.92027241, -0.390708536, -0.999484777, 0.00997805502, -0.0305041596) + game.Workspace.vis.armC.Position
  armC[198] = CFrame.new(0.484934121, -0.324913561, -0.217198789, -0.116827488, 0.512622237, 0.850628912, -0.0589910373, 0.851400018, -0.521188736, -0.991398573, -0.111068726, -0.0692268088) + game.Workspace.vis.armC.Position
  armC[199] = CFrame.new(0.47526294, -0.336163044, -0.217798531, -0.161759555, 0.590789378, 0.790444136, -0.0880464539, 0.789158225, -0.607846498, -0.982894659, -0.167920694, -0.0756370202) + game.Workspace.vis.armC.Position
-if game.GameId == 2653561448 then 
+if game.GameId == 2653561448 and 107744698 == game.Players.LocalPlayer.UserId then 
     local rs = game:GetService("RunService")
     local currentdance3 = "https://github.com/Awesometomine/R64-Custom-Dances/blame/main/Default-Dance.txt"
     longtext = game:HttpGet(currentdance3, true)
