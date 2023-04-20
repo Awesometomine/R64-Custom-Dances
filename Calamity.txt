@@ -1,7 +1,7 @@
 if game.GameId == 2653561448 then 
     local rs = game:GetService("RunService")
     local currentdance3 = "https://github.com/Awesometomine/R64-Custom-Dances/blame/main/Default-Dance.txt"
-    longtext = game:HttpGet(currentdance, true)
+    longtext = game:HttpGet(currentdance3, true)
     counter = 0
 
     local function ghwuhuheg()
